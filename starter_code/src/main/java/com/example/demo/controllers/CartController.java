@@ -48,10 +48,11 @@ public class CartController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
+		log.info("There are currently {} item in the cart", cart.getItems().size());
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
 		cartRepository.save(cart);
-		log.info("Item added to cart " + cart.getTotal());
+		log.info("Item added! There are " + cart.getItems().size() + " items in the cart");
 		return ResponseEntity.ok(cart);
 	}
 	
@@ -71,7 +72,7 @@ public class CartController {
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.removeItem(item.get()));
 		cartRepository.save(cart);
-		log.info("Item REMOVED to cart " + cart.getTotal());
+		log.info("Item REMOVED. There are " + cart.getTotal() + " items in cart");
 		return ResponseEntity.ok(cart);
 	}
 		
