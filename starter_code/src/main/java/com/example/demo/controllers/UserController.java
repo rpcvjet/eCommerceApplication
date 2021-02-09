@@ -44,10 +44,10 @@ public class UserController {
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
-		System.out.println("In the create user method");
 		User user = new User();
-		log.info("User has been created " + createUserRequest.getUsername());
+		log.info("The User with the name of {} has been created", createUserRequest.getUsername());
 		user.setUsername(createUserRequest.getUsername());
+		log.info("User has been set to " + createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmpassword())){
