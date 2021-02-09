@@ -178,3 +178,7 @@
 2021-02-09 12:05:34.145 ERROR 42123 --- [http-nio-8080-exec-1] c.e.demo.controllers.OrderController     : Order not successful for Tommy 
 2021-02-09 12:25:44.643  WARN 42123 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s942ms).
 2021-02-09 12:30:08.792  WARN 42123 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m54s133ms).
+2021-02-09 12:30:43.006  INFO 42123 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-09 12:30:43.081  INFO 42123 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-09 12:30:43.163  INFO 42123 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-09 12:30:43.177  INFO 42123 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
