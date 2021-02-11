@@ -1,3 +1,5 @@
 .idea/
-/starter_code_/target/
-/starter_code/logs/
+target/
+starter_code/target
+!**/src/main/**/target/
+
